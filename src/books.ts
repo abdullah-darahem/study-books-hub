@@ -1,0 +1,148 @@
+export type Book = {
+  id: string;
+  file: string;
+  title: string;
+  short: string;
+  emoji: string;
+  hue: number;
+  scope: string;
+  desc: string;
+  ar: string;
+  topics: string[];
+  category: "Software & Data" | "Systems & Hardware" | "Math & Intelligence";
+};
+
+export const books: Book[] = [
+  {
+    id: "ai",
+    file: "books/ai.html",
+    title: "Artificial Intelligence",
+    short: "AI",
+    emoji: "🧠",
+    hue: 275,
+    scope: "Midterm · Lectures 1–4",
+    desc: "What AI is, agents and environments, rationality, PEAS, the six environment dimensions and the agent types.",
+    ar: "الفصل ده هو نص الامتحان تقريبًا — agents, rationality وأنواع البيئات.",
+    topics: ["Agents", "PEAS", "Rationality", "Environments"],
+    category: "Math & Intelligence",
+  },
+  {
+    id: "assembly",
+    file: "books/assembly.html",
+    title: "Microprocessors & Assembly",
+    short: "ASM",
+    emoji: "⚙️",
+    hue: 60,
+    scope: "Ch. 1–4 · up to p.84",
+    desc: "Machine language, translators, virtual machines, binary & hex, two's complement and Boolean algebra.",
+    ar: "ليه لسه بنذاكر Assembly؟ الثنائي والهيكس وجبر Boolean.",
+    topics: ["Binary / Hex", "Two's complement", "Boolean", "VMs"],
+    category: "Systems & Hardware",
+  },
+  {
+    id: "data-analytics",
+    file: "books/data-analytics.html",
+    title: "Data Analytics",
+    short: "DA",
+    emoji: "📊",
+    hue: 305,
+    scope: "Lectures 1–5 + College Book",
+    desc: "17 topics, 362 questions, essays and labs — from descriptive to prescriptive analytics, with case studies.",
+    ar: "الصورة الكبيرة: تعريفات ومقارنات وأمثلة من الـ case studies.",
+    topics: ["362 questions", "37 essays", "Labs", "Moneyball"],
+    category: "Software & Data",
+  },
+  {
+    id: "databases",
+    file: "books/databases.html",
+    title: "Databases I",
+    short: "DB",
+    emoji: "🗄️",
+    hue: 185,
+    scope: "Midterm · Ch. 1–2",
+    desc: "DBMS, data models, three levels of data description, DDL & DML, integrity constraints and client–server.",
+    ar: "يعني إيه Database و DBMS؟ وليه الـ OS مينفعش يدير قواعد البيانات؟",
+    topics: ["DBMS", "Data models", "DDL / DML", "Constraints"],
+    category: "Software & Data",
+  },
+  {
+    id: "image-processing",
+    file: "books/image-processing.html",
+    title: "Image Processing",
+    short: "IMG",
+    emoji: "🖼️",
+    hue: 10,
+    scope: "Up to p.82 + Exams",
+    desc: "Pixels, resolution, bit depth, raster vs vector, image types, six color models and the processing pipeline.",
+    ar: "الصورة أرقام في جدول! وإزاي تحسب حجمها بالـ KB.",
+    topics: ["Pixels", "Color models", "Pipeline", "Image size"],
+    category: "Math & Intelligence",
+  },
+  {
+    id: "operating-systems",
+    file: "books/operating-systems.html",
+    title: "Operating Systems",
+    short: "OS",
+    emoji: "💽",
+    hue: 235,
+    scope: "Midterm · Ch. 1 + Ch. 2a",
+    desc: "Booting, interrupts, storage hierarchy, I/O, multiprogramming, dual-mode, resource management, virtualization.",
+    ar: "الجهاز بيصحى إزاي؟ يعني إيه interrupt؟ وإزاي الـ OS بيشغّل كذا برنامج؟",
+    topics: ["Interrupts", "Storage", "Dual-mode", "Virtualization"],
+    category: "Systems & Hardware",
+  },
+  {
+    id: "operations-research",
+    file: "books/operations-research.html",
+    title: "Operations Research",
+    short: "OR",
+    emoji: "📐",
+    hue: 150,
+    scope: "Ch. 1–5 + Book + Exams",
+    desc: "OR phases, model components, LP assumptions, turning word problems into LP models, integer & non-linear.",
+    ar: "أهم مهارة: تقرا قصة (مصنع، دوا…) وتطلّع منها LP model. محتاج نت مرة عشان KaTeX.",
+    topics: ["LP models", "Simplex", "Word problems", "KaTeX math"],
+    category: "Math & Intelligence",
+  },
+  {
+    id: "robotics",
+    file: "books/robotics.html",
+    title: "Robotics",
+    short: "ROB",
+    emoji: "🤖",
+    hue: 35,
+    scope: "Lectures 1–4 + Exams",
+    desc: "History, Asimov's laws, RIA & JARA definitions, sense–think–act, and every robot classification.",
+    ar: "«حفظ ذكي»: تواريخ، تعريفات، وتصنيفات في جداول تتحفظ بسرعة.",
+    topics: ["Asimov", "JIRA classes", "Generations", "Sense–Think–Act"],
+    category: "Systems & Hardware",
+  },
+  {
+    id: "software-engineering",
+    file: "books/software-engineering.html",
+    title: "Software Engineering 1",
+    short: "SE",
+    emoji: "🛠️",
+    hue: 340,
+    scope: "Midterm · Lectures 1–5",
+    desc: "Software attributes, SE vs CS, generic vs customized products, process activities, application types and ethics.",
+    ar: "يعني إيه software؟ والـ ٨ أنواع applications وأخلاقيات المهنة.",
+    topics: ["Process", "App types", "Ethics", "Challenges"],
+    category: "Software & Data",
+  },
+  {
+    id: "web-programming",
+    file: "books/web-programming.html",
+    title: "Web Programming",
+    short: "WEB",
+    emoji: "🌐",
+    hue: 90,
+    scope: "Midterm · HTML · CSS · PHP",
+    desc: "Internet, browsers, HTTP, URLs, static vs dynamic pages and HTML: structure, tags, lists, tables and more.",
+    ar: "إزاي الصفحة بتوصلك من السيرفر؟ وكل tag في الـ HTML بتعمل إيه.",
+    topics: ["HTTP", "HTML", "CSS", "PHP"],
+    category: "Software & Data",
+  },
+];
+
+export const categories = ["All", "Software & Data", "Systems & Hardware", "Math & Intelligence"] as const;
